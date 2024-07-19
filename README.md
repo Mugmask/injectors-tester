@@ -1,8 +1,36 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Injector Tester
 
-Currently, two official plugins are available:
+An application designed to perform performance tests on injectors and analyze their efficiency at each stage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Light/dark mode toggle
+- Responsive Design
+- Fullscreen mode
+
+## Tech Stack
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+
+## How to use
+1. Clone the repo
+``` bash
+git clone https://github.com/Mugmask/injectors-tester.git
+```
+
+2. Install dependencies
+``` bash
+npm install
+```
+
+3. Start the dev server
+``` bash
+npm run dev
+```
+
+
+
+
