@@ -1,22 +1,19 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import InjectorsAdd from "./InjectorsAdd";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import InjectorsTable from "./InjectorsTable";
 
 export default function Injectors() {
   return (
-    <div className="">
-      <Tabs defaultValue="table_injectors">
-        <TabsList className="grid grid-cols-2">
-          <TabsTrigger value="table_injectors">Injectores</TabsTrigger>
-          <TabsTrigger value="add_injector">Agregar injectores</TabsTrigger>
-        </TabsList>
-        <TabsContent value="table_injectors">
-          <InjectorsTable />
-        </TabsContent>
-        <TabsContent value="add_injector">
-          <InjectorsAdd />
-        </TabsContent>
-      </Tabs>
+    <div className="flex flex-col w-11/12">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 pb-4 max-sm:grid-cols-2 ">
+        <Card className="p-3 sm:col-span-2 md:col-span-4 max-sm:col-span-2">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-left mb-4">Injectores</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <InjectorsTable />
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

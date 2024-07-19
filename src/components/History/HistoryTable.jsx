@@ -279,7 +279,7 @@ export default function HistoryTable() {
 
     initialState: {
       pagination: {
-        pageSize: 5,
+        pageSize: 8,
       },
     },
     state: {
@@ -292,15 +292,21 @@ export default function HistoryTable() {
 
   return (
     <div className="w-full">
-      <div className="flex items-center py-4">
+      <div className="flex items-center justify-between py-4 gap-8">
         <Input
           placeholder="Buscar prueba..."
           value={table.getColumn("cod_inyector")?.getFilterValue() ?? ""}
           onChange={(event) => table.getColumn("cod_inyector")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
+        {/*         <Link to="/newtest">
+          <Button>
+            <CirclePlus className="h-4 w-4 md:mr-2" />
+            <p className=" max-sm:hidden sm:hidden md:block">Nueva prueba</p>
+          </Button>
+        </Link> */}
       </div>
-      <div className="rounded-md border ">
+      <div className="rounded-md border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
