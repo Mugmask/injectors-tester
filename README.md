@@ -14,6 +14,7 @@ This application is designed to perform performance tests on injectors and analy
 - TypeScript
 - Tailwind CSS
 - Vite
+- Firebase
 
 ## How to use
 1. Clone the repo
