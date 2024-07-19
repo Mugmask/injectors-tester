@@ -1,7 +1,7 @@
 
 # Injector Tester
 
-An application designed to perform performance tests on injectors and analyze their efficiency at each stage.
+This application is designed to perform performance tests on injectors and analyze their efficiency at each stage. It features three sections: New Test, Test History, and Injectors. It is intended to be used as a desktop application with Tauri and Firebase.
 
 ## Features
 
