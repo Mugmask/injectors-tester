@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Link } from "react-router-dom";
-import InjectorsFilter from "./InjectorsFilters";
 
 const data = [
   {
@@ -246,7 +245,7 @@ const columns = [
 
       return (
         <div className="flex flex-row justify-center">
-          <Link to={`/history/${data.id}`}>
+          <Link to={`/injectors/${data.id}`}>
             <Button variant="ghost" className="flex justify-center items-center px-3">
               <Eye className=" h-5 w-5 " />
             </Button>
@@ -300,7 +299,6 @@ export default function InjectorsTable() {
           onChange={(event) => table.getColumn("cod_inyector")?.setFilterValue(event.target.value)}
           className="max-w-sm"
         />
-        <InjectorsFilter />
         <Link to="/injectors/add">
           <Button>
             <CirclePlus className="h-4 w-4 md:mr-2" />

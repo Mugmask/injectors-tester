@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -29,28 +30,58 @@ export default function InjectorsAdd() {
   }
 
   return (
-    <div className="h-full w-full">
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormDescription>This is your public display name.</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit" className="w-fu">
-            Submit
-          </Button>
-        </form>
-      </Form>
-    </div>
+    <Card className="">
+      <CardHeader className="pb-3">
+        <CardTitle className="text-left mb-4">Agregar Injector</CardTitle>
+        <CardDescription className="leading-relaxed text-left">
+          Complete todos los campos para poder generar un injector
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Carousel>
+          <CarouselContent>
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      {/* <div className="h-full w-full">
+                    <Form {...form}>
+                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                        <FormField
+                          control={form.control}
+                          name="username"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Username</FormLabel>
+                              <FormControl>
+                                <Input placeholder="shadcn" {...field} />
+                              </FormControl>
+                              <FormDescription>This is your public display name.</FormDescription>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <Button type="submit" className="w-fu">
+                          Submit
+                        </Button>
+                      </form>
+                    </Form>
+                  </div> */}
+                      <span className="text-4xl font-semibold">{index + 1}</span>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </CardContent>
+      <CardFooter>
+        <Button>Crear Injector</Button>
+      </CardFooter>
+    </Card>
   );
 }

@@ -28,7 +28,7 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardFooter className="mt-4">
-            <Link to="/injectors" className={`${buttonVariants()} w-full`}>
+            <Link to="/injectors/add" className={`${buttonVariants()} w-full`}>
               Generar injector
             </Link>
           </CardFooter>
