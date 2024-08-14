@@ -3,7 +3,7 @@ import HistoryTable from "./HistoryTable";
 
 export default function History() {
   return (
-    <div className="flex flex-col w-11/12">
+    <div className="flex flex-col w-full">
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 pb-4 max-sm:grid-cols-2 ">
         <Card className="p-3 sm:col-span-2 md:col-span-4 max-sm:col-span-2">
           <CardHeader className="pb-3">
