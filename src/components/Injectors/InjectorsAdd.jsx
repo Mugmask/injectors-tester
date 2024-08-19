@@ -4,20 +4,140 @@ import { Input } from "@/components/ui/input";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { string, z } from "zod";
+import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 
 const formSchema = z.object({
   cod_injector: z.string().min(2, {
-    message: "Codigo Inyector es obligatorio.",
+    message: "Campo obligatorio.",
   }),
   brand_injector: z.string().min(2, {
-    message: "Codigo Inyector es obligatorio.",
+    message: "Campo obligatorio.",
   }),
   car_model: z.string().min(2, {
-    message: "Codigo Inyector es obligatorio.",
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_rpmBanco: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_anchoPulso: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_frecuencia: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_presionRiel: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_caudalEntregadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_caudalEntregadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_caudalRetornadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  plenaCarga_caudalRetornadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_rpmBanco: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_anchoPulso: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_frecuencia: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_presionRiel: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_caudalEntregadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_caudalEntregadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_caudalRetornadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  cargaParcial_caudalRetornadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_rpmBanco: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_anchoPulso: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_frecuencia: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_presionRiel: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_caudalEntregadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_caudalEntregadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_caudalRetornadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  ralenti_caudalRetornadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_rpmBanco: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_anchoPulso: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_frecuencia: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_presionRiel: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_caudalEntregadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_caudalEntregadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_caudalRetornadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  preInyeccion_caudalRetornadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_rpmBanco: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_anchoPulso: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_frecuencia: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_presionRiel: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_caudalEntregadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_caudalEntregadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_caudalRetornadoMin: z.string().min(2, {
+    message: "Campo obligatorio.",
+  }),
+  estanqueidad_caudalRetornadoMax: z.string().min(2, {
+    message: "Campo obligatorio.",
   }),
 });
 
@@ -163,7 +283,7 @@ export default function InjectorsAdd() {
           </CardHeader>
           <CardContent className="flex justify-center">
             <Carousel
-              className="w-full max-w-screen-2xl"
+              className="w-full max-w-screen-xl"
               opts={{
                 align: "start",
                 loop: false,
@@ -174,7 +294,7 @@ export default function InjectorsAdd() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8" id="myform">
                   <CarouselContent>
                     {stagesForms.map((stage, index) => (
-                      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <CarouselItem key={index} className="md:basis-1/2 xl:basis-1/3">
                         <div className="p-1">
                           <Card>
                             <CardHeader className="items-center gap-3">

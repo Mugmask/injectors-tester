@@ -5,12 +5,22 @@ import "./App.css";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    /*     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="flex h-screen">
         <Sidebar />
         <div className="flex flex-col flex-grow ">
-          {/* <header className="w-full h-20 flex items-center p-4 bg-muted/40"></header> */}
           <div className="flex-grow p-4 overflow-auto bg-muted/40 flex justify-center h-screen">
+            <Outlet />
+          </div>
+        </div>
+      </div>
+    </ThemeProvider> */
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <div className="flex h-screen overflow-hidden">
+        <Sidebar />
+        <div className="flex flex-col flex-grow">
+          {/* Contenido dinámico */}
+          <div className="flex-grow p-4 overflow-auto bg-muted/40 flex justify-center">
             <Outlet />
           </div>
         </div>
@@ -20,4 +30,3 @@ function App() {
 }
 
 export default App;
-
