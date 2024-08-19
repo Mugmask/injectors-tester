@@ -10,133 +10,133 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Separator } from "@/components/ui/separator";
 
 const formSchema = z.object({
-  cod_injector: z.string().min(2, {
+  cod_injector: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  brand_injector: z.string().min(2, {
+  brand_injector: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  car_model: z.string().min(2, {
+  car_model: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_rpmBanco: z.string().min(2, {
+  plenaCarga_rpmBanco: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_anchoPulso: z.string().min(2, {
+  plenaCarga_anchoPulso: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_frecuencia: z.string().min(2, {
+  plenaCarga_frecuencia: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_presionRiel: z.string().min(2, {
+  plenaCarga_presionRiel: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_caudalEntregadoMin: z.string().min(2, {
+  plenaCarga_caudalEntregadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_caudalEntregadoMax: z.string().min(2, {
+  plenaCarga_caudalEntregadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_caudalRetornadoMin: z.string().min(2, {
+  plenaCarga_caudalRetornadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  plenaCarga_caudalRetornadoMax: z.string().min(2, {
+  plenaCarga_caudalRetornadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_rpmBanco: z.string().min(2, {
+  cargaParcial_rpmBanco: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_anchoPulso: z.string().min(2, {
+  cargaParcial_anchoPulso: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_frecuencia: z.string().min(2, {
+  cargaParcial_frecuencia: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_presionRiel: z.string().min(2, {
+  cargaParcial_presionRiel: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_caudalEntregadoMin: z.string().min(2, {
+  cargaParcial_caudalEntregadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_caudalEntregadoMax: z.string().min(2, {
+  cargaParcial_caudalEntregadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_caudalRetornadoMin: z.string().min(2, {
+  cargaParcial_caudalRetornadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  cargaParcial_caudalRetornadoMax: z.string().min(2, {
+  cargaParcial_caudalRetornadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_rpmBanco: z.string().min(2, {
+  ralenti_rpmBanco: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_anchoPulso: z.string().min(2, {
+  ralenti_anchoPulso: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_frecuencia: z.string().min(2, {
+  ralenti_frecuencia: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_presionRiel: z.string().min(2, {
+  ralenti_presionRiel: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_caudalEntregadoMin: z.string().min(2, {
+  ralenti_caudalEntregadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_caudalEntregadoMax: z.string().min(2, {
+  ralenti_caudalEntregadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_caudalRetornadoMin: z.string().min(2, {
+  ralenti_caudalRetornadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  ralenti_caudalRetornadoMax: z.string().min(2, {
+  ralenti_caudalRetornadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_rpmBanco: z.string().min(2, {
+  preInyeccion_rpmBanco: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_anchoPulso: z.string().min(2, {
+  preInyeccion_anchoPulso: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_frecuencia: z.string().min(2, {
+  preInyeccion_frecuencia: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_presionRiel: z.string().min(2, {
+  preInyeccion_presionRiel: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_caudalEntregadoMin: z.string().min(2, {
+  preInyeccion_caudalEntregadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_caudalEntregadoMax: z.string().min(2, {
+  preInyeccion_caudalEntregadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_caudalRetornadoMin: z.string().min(2, {
+  preInyeccion_caudalRetornadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  preInyeccion_caudalRetornadoMax: z.string().min(2, {
+  preInyeccion_caudalRetornadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_rpmBanco: z.string().min(2, {
+  estanqueidad_rpmBanco: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_anchoPulso: z.string().min(2, {
+  estanqueidad_anchoPulso: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_frecuencia: z.string().min(2, {
+  estanqueidad_frecuencia: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_presionRiel: z.string().min(2, {
+  estanqueidad_presionRiel: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_caudalEntregadoMin: z.string().min(2, {
+  estanqueidad_caudalEntregadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_caudalEntregadoMax: z.string().min(2, {
+  estanqueidad_caudalEntregadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_caudalRetornadoMin: z.string().min(2, {
+  estanqueidad_caudalRetornadoMin: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
-  estanqueidad_caudalRetornadoMax: z.string().min(2, {
+  estanqueidad_caudalRetornadoMax: z.string().min(1, {
     message: "Campo obligatorio.",
   }),
 });
@@ -273,17 +273,17 @@ export default function InjectorsAdd() {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 pb-4 max-sm:grid-cols-2 ">
-        <Card className="p-3 sm:col-span-2 md:col-span-4 max-sm:col-span-2">
+      <div className="grid sm:grid-cols-2 md:grid-cols-4 max-sm:grid-cols-2 h-screen">
+        <Card className="p-3 sm:col-span-2 md:col-span-4 max-sm:col-span-2 h-full w-full flex flex-col justify-around">
           <CardHeader className="pb-3">
             <CardTitle className="text-left mb-4">Agregar Injector</CardTitle>
             <CardDescription className="leading-relaxed text-left">
               Complete todos los campos para poder generar un injector
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex justify-center">
+          <CardContent className="flex justify-center m-3">
             <Carousel
-              className="w-full max-w-screen-xl"
+              className="w-full max-w-screen-2xl"
               opts={{
                 align: "start",
                 loop: false,
@@ -301,8 +301,12 @@ export default function InjectorsAdd() {
                               <CardTitle>{stage.name}</CardTitle>
                               <Separator className=" w-2/3" />
                             </CardHeader>
-                            <CardContent className="flex aspect-square items-center justify-center p-3 overflow-y-auto">
-                              <div className="h-full w-full grid grid-cols-2 gap-3">
+                            <CardContent className="flex aspect-square items-center justify-center overflow-y-auto m-3">
+                              <div
+                                className={`h-full w-full grid sm:grid-cols-1 ${
+                                  !index ? "lg:grid-cols-1" : "lg:grid-cols-2"
+                                } gap-3`}
+                              >
                                 {stage.inputs.map((input) => (
                                   <FormField
                                     className="m-3"
@@ -329,12 +333,12 @@ export default function InjectorsAdd() {
                   </CarouselContent>
                 </form>
               </Form>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="m-2" />
+              <CarouselNext className="m-2" />
             </Carousel>
           </CardContent>
-          <CardFooter>
-            <Button type="submit" form="myform">
+          <CardFooter className="flex justify-center items-center">
+            <Button type="submit" form="myform" className=" max-sm:w-full sm:w-full xl:w-1/3">
               Crear Injector
             </Button>
           </CardFooter>
