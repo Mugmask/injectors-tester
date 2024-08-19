@@ -301,10 +301,11 @@ export default function InjectorsAdd() {
                               <CardTitle>{stage.name}</CardTitle>
                               <Separator className=" w-2/3" />
                             </CardHeader>
-                            <CardContent className="flex aspect-square items-center justify-center p-6  overflow-y-auto">
-                              <div className="h-full w-full">
+                            <CardContent className="flex aspect-square items-center justify-center p-3 overflow-y-auto">
+                              <div className="h-full w-full grid grid-cols-2 gap-3">
                                 {stage.inputs.map((input) => (
                                   <FormField
+                                    className="m-3"
                                     key={input.id}
                                     control={form.control}
                                     name={input.id}
